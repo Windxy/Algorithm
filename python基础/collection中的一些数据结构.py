@@ -9,7 +9,7 @@
 * UserList     wrapper around list objects for easier list subclassing
 * UserString   wrapper around string objects for easier string subclassing
 '''
-from collections import OrderedDict,deque
+from collections import OrderedDict,deque,defaultdict
 '''1.OrderDict'''
 # O = OrderedDict()
 # O[1] = 2
@@ -35,3 +35,8 @@ q.pop()
 print(q)
 for i in q:
     print(i)
+'''3.defaultdict'''
+dict_s1 = defaultdict(int)
+for i in range(ord("A"), ord("Z") + 1):
+    dict_s1[chr(i)] = 0
+print(dict_s1)
