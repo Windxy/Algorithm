@@ -25,18 +25,18 @@ from collections import OrderedDict,deque,defaultdict
 
 '''2.deque'''
 q = deque()
-q.append(3)
-print(q)
+q.append((1,2))
+c,c1 = q.popleft()
+print(c,c1)
 q.append(4)
 q.append(5)
 q.append(6)
-print(q)
 q.pop()
-print(q)
 for i in q:
     print(i)
+
 '''3.defaultdict'''
-dict_s1 = defaultdict(int)
-for i in range(ord("A"), ord("Z") + 1):
-    dict_s1[chr(i)] = 0
-print(dict_s1)
+# dict_s1 = defaultdict(int)
+# for i in range(ord("A"), ord("Z") + 1):
+#     dict_s1[chr(i)] = 0
+# print(dict_s1)
