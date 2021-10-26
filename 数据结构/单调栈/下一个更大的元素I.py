@@ -7,6 +7,7 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位
 链接：https://leetcode-cn.com/problems/next-greater-element-i
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 '''
+from typing import List
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
         # hash  + 单调栈
