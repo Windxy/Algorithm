@@ -7,3 +7,5 @@ tim = "b" in dict
 for i in dict.items():
     print(i[0],i[1])
 
+for key in dict:
+    print(key,dict[key])
