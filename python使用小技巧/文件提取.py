@@ -6,5 +6,5 @@ def getFlist(path):
         print('files:', files)
     return files
 resDir = 'res'
-flist = getFlist('D:\Project\Algorithm')
+flist = getFlist('/')
 print(flist)
