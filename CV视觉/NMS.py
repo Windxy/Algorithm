@@ -16,7 +16,7 @@ def non_max_suppress(predicts_dict, threshold=0.2):
         predicts_dict processed by non-maximum suppression
     """
     for object_name, bbox in predicts_dict.items():  # 对每一个类别的目标分别进行NMS
-        bbox_array = np.array(bbox, dtype=np.float)
+        bbox_array = np.array(bbox, dtype=np.float32)
 
         ## 获取当前目标类别下所有矩形框（bounding box,下面简称bbx）的坐标和confidence,并计算所有bbx的面积
         x1, y1, x2, y2, scores = bbox_array[:, 0], bbox_array[:, 1], bbox_array[:, 2], bbox_array[:, 3], bbox_array[:,4]
