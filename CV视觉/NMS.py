@@ -3,6 +3,11 @@ import numpy as np
 
 def non_max_suppress(predicts_dict, threshold=0.2):
     """
+    流程如下：https://zhuanlan.zhihu.com/p/482162892
+    1.找到置信度最大的框，该框肯定是目标，得到第1个框；
+    2.依次计算其他相同类别框与第1个框的重合度（IOU值），如果大于一定阈值，抑制掉；
+    3.剩下的框中，同样找置信度最大的框，为第2个框，抑制掉重合的框；
+    4.反复执行上述步骤，直到剩下最后一个框，此亦为目标框。
     implement non-maximum supression on predict bounding boxes.
     Args:
         predicts_dict: {"stick": [[x1, y1, x2, y2, scores1], [...]]}.
@@ -14,8 +19,7 @@ def non_max_suppress(predicts_dict, threshold=0.2):
         bbox_array = np.array(bbox, dtype=np.float)
 
         ## 获取当前目标类别下所有矩形框（bounding box,下面简称bbx）的坐标和confidence,并计算所有bbx的面积
-        x1, y1, x2, y2, scores = bbox_array[:, 0], bbox_array[:, 1], bbox_array[:, 2], bbox_array[:, 3], bbox_array[:,
-                                                                                                         4]
+        x1, y1, x2, y2, scores = bbox_array[:, 0], bbox_array[:, 1], bbox_array[:, 2], bbox_array[:, 3], bbox_array[:,4]
         areas = (x2 - x1 + 1) * (y2 - y1 + 1)
         # print("areas shape = ", areas.shape)
 
