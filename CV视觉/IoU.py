@@ -1,7 +1,6 @@
 def iou(box1, box2):
     '''
-    两个框（二维）的 iou 计算
-    注意：边框以左上为原点
+    iou 计算
     box:[top, left, bottom, right]
     '''
     in_h = min(box1[2], box2[2]) - max(box1[0], box2[0])
