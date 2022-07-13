@@ -7,10 +7,10 @@ backward until the order is correct.  It then goes back directly to the
 element's initial position resuming forward comparison.
 
 For doctests run following command:
-python3 -m doctest -v insertion_sort.py
+python3 -m doctest -v 插入排序.py
 
 For manual testing run:
-python3 insertion_sort.py
+python3 插入排序.py
 """
 
 
@@ -57,4 +57,4 @@ if __name__ == "__main__":
 
     user_input = input("Enter numbers separated by a comma:\n").strip()
     unsorted = [int(item) for item in user_input.split(",")]
-    print(f"{insertion_sort(unsorted) = }")
+    # print(f"{insertion_sort(unsorted) = }")

@@ -1,11 +1,11 @@
 """
 This is a pure Python implementation of the merge sort algorithm
 For doctests run following command:
-python -m doctest -v merge_sort.py
+python -m doctest -v 归并排序.py
 or
-python3 -m doctest -v merge_sort.py
+python3 -m doctest -v 归并排序.py
 For manual testing run:
-python merge_sort.py
+python 归并排序.py
 """
 
 

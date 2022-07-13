@@ -2,10 +2,10 @@
 A pure Python implementation of the quick sort algorithm
 
 For doctests run following command:
-python3 -m doctest -v quick_sort.py
+python3 -m doctest -v 快速排序.py
 
 For manual testing run:
-python3 quick_sort.py
+python3 快速排序.py
 """
 
 

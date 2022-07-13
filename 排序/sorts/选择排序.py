@@ -2,12 +2,12 @@
 This is a pure Python implementation of the selection sort algorithm
 
 For doctests run following command:
-python -m doctest -v selection_sort.py
+python -m doctest -v 选择排序.py
 or
-python3 -m doctest -v selection_sort.py
+python3 -m doctest -v 选择排序.py
 
 For manual testing run:
-python selection_sort.py
+python 选择排序.py
 """
 
 
